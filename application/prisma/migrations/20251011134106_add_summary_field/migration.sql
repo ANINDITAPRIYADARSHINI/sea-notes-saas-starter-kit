@@ -5,7 +5,8 @@
 
 */
 -- AlterTable
-ALTER TABLE "Note" ADD COLUMN     "summary" TEXT;
+ALTER TABLE "Note" ADD COLUMN IF NOT EXISTS "summary" TEXT;
+
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Subscription_userId_key" ON "Subscription"("userId");
+CREATE UNIQUE INDEX IF NOT EXISTS "Subscription_userId_key" ON "Subscription"("userId");
