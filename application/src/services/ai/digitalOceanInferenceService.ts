@@ -107,7 +107,7 @@ export class DigitalOceanInferenceService {
    */
   private async makeCompletion(messages: Array<{ role: 'system' | 'user' | 'assistant'; content: string }>, options: Record<string, unknown> = {}): Promise<string> {
     const defaultOptions = {
-      model: 'anthropic-claude-3-opus',
+      model: 'llama3-8b-instruct',
       max_tokens: 100,
       temperature: 0.7,
     };
